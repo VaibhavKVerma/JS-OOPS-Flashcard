@@ -45,7 +45,8 @@ class App {
         saveBtn.addEventListener('click', this._saveBtn.bind(this));
     }
 
-    _saveBtn() {
+    _saveBtn(e) {
+        e.preventDefault();
         // console.log("Save question working");
         if (!questionInput.value || !answerInput.value) {
             feedback.style.display = "block";
