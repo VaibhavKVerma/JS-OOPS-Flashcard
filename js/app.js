@@ -15,6 +15,7 @@ class App {
         this._closeBtn();
         this._saveQuestion();
         this._loadQuestion();
+        this._showhide();
     }
 
     _loadQuestion(){
@@ -31,7 +32,6 @@ class App {
         });
         this._deleteQuestion();
         this._editQuestion();
-        this._showhide();
     }
 
     _addQuestion() {
@@ -47,7 +47,6 @@ class App {
 
     _saveBtn(e) {
         e.preventDefault();
-        // console.log("Save question working");
         if (!questionInput.value || !answerInput.value) {
             feedback.style.display = "block";
             feedback.classList.add('alert-danger');
@@ -114,8 +113,6 @@ class App {
             node.querySelector('h5').classList.toggle('answer');
         });
     }
-
-
 };
 
 const app = new App();
